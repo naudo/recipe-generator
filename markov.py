@@ -30,9 +30,9 @@ def make_text(chains):
     size = 20
 
     seed = random.randint(0, size - 3)# 3 because we want to exclude seed word, next word, and trailing word    
-
-    seed_word = "be" 
-    next_word = "fine"
+    rand_tuple = random.choice(chains.keys())
+    seed_word = rand_tuple[0] 
+    next_word = rand_tuple[1]
  
     for i in range(1,size):
       text_array.append(seed_word)
